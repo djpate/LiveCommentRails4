@@ -44,5 +44,6 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'puma'
+gem 'puma', :group => :development
+gem 'unicorn', :group => :production
 gem 'redis'
