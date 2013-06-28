@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
   
   def index
-    @comments = Comment.all
+    @comments = Comment.order('id desc').limit(5).all.reverse
   end
 
   def create
