@@ -3,7 +3,7 @@ class Comment < ActiveRecord::Base
 
   def notify_new_comment
     redis = Redis.new
-    redis.publish("new_comment", self.to_json)
+    redis.publish("new_comment", {:title => self.title, :content => self.content}.to_json)
   end
 
 end

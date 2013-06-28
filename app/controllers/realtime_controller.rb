@@ -9,7 +9,7 @@ class RealtimeController < ApplicationController
     begin
       @redis.subscribe('new_comment') do |on|
         on.message do |event, data|
-          @stream.write(data, :event => :new)
+          @stream.write(JSON.parse(data).to_json, :event => :new)
         end
       end
     ensure

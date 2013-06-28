@@ -43,7 +43,7 @@ jQuery(document).ready(function() {
   });
 
   source.addEventListener('new', function(e) {
-    data = $.parseJSON($.parseJSON(e.data));
+    data = $.parseJSON(e.data);
     var comment = new Backbone.Model({title: data.title, content: data.content});
     newCommentCollection.add(comment);
   });

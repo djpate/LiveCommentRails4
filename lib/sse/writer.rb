@@ -6,10 +6,12 @@ module Sse
     end
 
     def write object, options = {}
+      
       options.each do |k,v|
         @io.write "#{k}: #{v}\n"
       end
-      @io.write "data: #{JSON.dump(object)}\n\n"
+
+      @io.write "data: #{object}\n\n"
     end
 
     def close
