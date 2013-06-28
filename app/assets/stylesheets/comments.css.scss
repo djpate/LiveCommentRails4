@@ -1,0 +1,43 @@
+#comment_app{
+  padding: 5px;
+  #comments_container{
+    .comment{
+      background-color: #EFEFEF;
+      border:1px solid black;
+      padding: 5px;
+      margin-bottom: 5px;
+      h1{
+        padding: 0;
+        margin: 0;
+        font-size: 15px;
+      }
+      p{
+        font-size: 12px;
+      }
+    }
+  }
+  #see_newer{
+    display: none;
+    border:1px solid black;
+    padding: 5px;
+    background-color: #E9e9e9;
+  }
+}
+
+#comment_form{
+  input,textarea{
+    padding: 5px;
+    border:1px solid #EFEFEF;
+    margin-bottom: 10px;
+    width: 500px;
+  }
+
+  textarea{
+    height: 200px;
+  }
+
+  input[type=submit]{
+    display: block;
+    width: 100px;
+  }
+}

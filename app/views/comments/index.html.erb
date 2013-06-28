@@ -19,9 +19,11 @@
     </div>
   </script>
 
-<h3>Add comment</h3>
-<%= form_tag(comments_path, method: "post") do %>
-  <input name='title' placeholder='Title'><br />
-  <textarea name='content' placeholder='Comment'></textarea>
-  <input type='submit' value='Save' />
-<% end %>
+<div id='comment_form'>
+  <h3>Add comment</h3>
+  <%= form_tag(comments_path, method: "post") do %>
+    <input name='title' placeholder='Title'><br />
+    <textarea name='content' placeholder='Comment'></textarea>
+    <input type='submit' value='Save' />
+  <% end %>
+</div>
